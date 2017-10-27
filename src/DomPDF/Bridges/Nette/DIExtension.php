@@ -65,6 +65,9 @@ class DIExtension extends ExtensionsExtension {
 			->setArguments([$config]);
 	}
 
+	/**
+	 * @return array
+	 */
 	protected function prepareConfig() {
 		$this->validateConfig($this->defaults);
 		$builder = $this->getContainerBuilder();
@@ -78,38 +81,5 @@ class DIExtension extends ExtensionsExtension {
 
 		return Helpers::expand($config, $builder->parameters);
 	}
-
-
-
-	/**
-'tempDir'|||'temp_dir'
-'fontDir'|||'font_dir'
-'fontCache'|||'font_cache'
-'chroot'
-'logOutputFile'|||'log_output_file'
-'defaultMediaType'|||'default_media_type'
-'defaultPaperSize'|||'default_paper_size'
-'defaultPaperOrientation'|||'default_paper_orientation'
-'defaultFont'|||'default_font'
-'dpi'
-'fontHeightRatio'|||'font_height_ratio'
-'isPhpEnabled'|||'is_php_enabled'|||'enable_php'
-'isRemoteEnabled'|||'is_remote_enabled'|||'enable_remote'
-'isJavascriptEnabled'|||'is_javascript_enabled'|||'enable_javascript'
-'isHtml5ParserEnabled'|||'is_html5_parser_enabled'|||'enable_html5_parser'
-'isFontSubsettingEnabled'|||'is_font_subsetting_enabled'|||'enable_font_subsetting'
-'debugPng'|||'debug_png'
-'debugKeepTemp'|||'debug_keep_temp'
-'debugCss'|||'debug_css'
-'debugLayout'|||'debug_layout'
-'debugLayoutLines'|||'debug_layout_lines'
-'debugLayoutBlocks'|||'debug_layout_blocks'
-'debugLayoutInline'|||'debug_layout_inline'
-'debugLayoutPaddingBox'|||'debug_layout_padding_box'
-'pdfBackend'|||'pdf_backend'
-'pdflibLicense'|||'pdflib_license'
-'adminUsername'|||'admin_username'
-'adminPassword'|||'admin_password'
-	 **/
 
 }
