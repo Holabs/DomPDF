@@ -5,7 +5,7 @@ namespace Holabs\DomPDF\Bridges\Nette;
 
 use Holabs\DomPDF\Factory;
 use Nette\DI\Helpers;
-use Nette\DI\Extensions\ExtensionsExtension;
+use Nette\DI\CompilerExtension;
 
 
 /**
@@ -13,7 +13,7 @@ use Nette\DI\Extensions\ExtensionsExtension;
  * @package      holabs/dompdf
  * @copyright    Copyright © 2017, Tomáš Holan [www.tomasholan.eu]
  */
-class DIExtension extends ExtensionsExtension {
+class DIExtension extends CompilerExtension {
 
 	public $defaults = [
 		'tempDir' => '%tempDir%/cache/DomPDF.Cache',
