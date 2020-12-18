@@ -23,7 +23,7 @@ class DomPDF extends OriginalDompdf implements IResponse {
 	 * @param INetteResponse $httpResponse
 	 * @return void
 	 */
-	function send(IRequest $httpRequest, INetteResponse $httpResponse) {
+	function send(IRequest $httpRequest, INetteResponse $httpResponse): void {
 
 		$this->render();
 		$httpResponse->setContentType('application/pdf');
